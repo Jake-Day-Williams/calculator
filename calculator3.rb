@@ -2,14 +2,14 @@ def menu
   puts "Calculator is ready."
 end
 
-def first
-  print "First number: "
-  @first = gets.to_f
+def first_num
+  print "first_num number: "
+  @first_num = gets.to_f
 end
 
-def last
+def next_num
   print "Next number: "
-  @last = gets.to_f
+  @next_num = gets.to_f
 end
 
 def compute
@@ -31,41 +31,41 @@ def compute
 end
 
 def add
-  last
-  total = @first + @last
-  puts "#{@first} + #{@last} = #{total.round(2)}" 
-  @first = total
+  next_num
+  total = @first_num + @next_num
+  puts "#{@first_num} + #{@next_num} = #{total.round(2)}" 
+  @first_num = total
   compute
 end
 
 def subtract
-  last
-  total = @first - @last
-  puts  "#{@first} - #{@last} = #{total.round(2)}"
-  @first = total
+  next_num
+  total = @first_num - @next_num
+  puts  "#{@first_num} - #{@next_num} = #{total.round(2)}"
+  @first_num = total
   compute
 end
 
 def multiply
-  last
-  total = @first * @last
-  puts  "#{@first} * #{@last} = #{total(2)}"
-  @first = total
+  next_num
+  total = @first_num * @next_num
+  puts  "#{@first_num} * #{@next_num} = #{total(2)}"
+  @first_num = total
   compute
 end
 
 def divide
-  last
-  total = @first / @last
-  puts  "#{@first} / #{@last} = #{total(2)}"
-  @first = total
+  next_num
+  total = @first_num / @next_num
+  puts  "#{@first_num} / #{@next_num} = #{total(2)}"
+  @first_num = total
   compute
 end 
 
 
 def all
   menu
-  first
+  first_num
   compute
 end
 
